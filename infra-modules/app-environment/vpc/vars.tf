@@ -51,7 +51,7 @@ variable "environment" {
 
 variable "availability_zones" {
   type  = list(string)
-  default = ["eu-west-1a", "eu-west-1b"]
+  default = ["us-west-2a", "us-west-2b"]
   description = "List of availability zones for the selected region"
 }
 

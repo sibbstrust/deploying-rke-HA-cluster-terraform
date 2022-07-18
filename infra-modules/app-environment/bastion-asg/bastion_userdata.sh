@@ -27,7 +27,7 @@ mv rke_linux-amd64 rke
 # Copy details of cluster config to Secrets Manager
 # Store Kube Config as secret for worker nodes
 KUBE_CONFIG=$(cat kube_config_cluster.yml)
-aws secretsmanager create-secret --name rkekubeconfig --description "Kube config for RKE cluster" --secret-string "$KUBE_CONFIG" --region eu-west-1
+aws secretsmanager create-secret --name rkekubeconfig --description "Kube config for RKE cluster" --secret-string "$KUBE_CONFIG" --region us-west-2
 
 # Download and install kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
